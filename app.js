@@ -42,7 +42,7 @@ function addTodo(e) {
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
   
-  //attach final Todo
+  //append Todo to end of list
   todoList.appendChild(todoDiv);
 }
 
@@ -50,7 +50,7 @@ function deleteTodo(e) {
   const item = e.target;
 
   if (item.classList[0] === "trash-btn") {
-    // e.target.parentElement.remove();
+
     const todo = item.parentElement;
     todo.classList.add("fall");
     
@@ -60,6 +60,12 @@ function deleteTodo(e) {
       todo.remove();
     });
   }
+  
+  
+
+
+  
+
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
@@ -146,7 +152,7 @@ function getTodos() {
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
     
-    //attach final Todo
+    //append Todo to end of list
     todoList.appendChild(todoDiv);
   });
 }
