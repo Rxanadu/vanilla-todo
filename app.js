@@ -48,7 +48,8 @@ function addTodo(e) {
 
 function deleteTodo(e) {
   const item = e.target;
-
+.  
+  //for the trash (delete) button
   if (item.classList[0] === "trash-btn") {
 
     const todo = item.parentElement;
@@ -65,7 +66,7 @@ function deleteTodo(e) {
 
 
   
-
+  //for the complete button
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
